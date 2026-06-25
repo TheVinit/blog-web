@@ -17,7 +17,7 @@ async function seed() {
 
     // Create default user
     const salt = await bcrypt.genSalt(10);
-    const passwordHash = await bcrypt.hash('thrinax123', salt);
+    const passwordHash = await bcrypt.hash('aura123', salt);
 
     const insertUser = db.prepare(`
       INSERT INTO users (username, password_hash, display_name, bio, avatar_url)
@@ -27,8 +27,8 @@ async function seed() {
     const userResult = insertUser.run(
       'editor',
       passwordHash,
-      'Thrinax Editorial',
-      'Chief editor and technology curator at Thrinax Publishing.',
+      'Aura Editorial',
+      'Chief editor and technology curator at Aura Publishing.',
       'https://api.dicebear.com/7.x/bottts/svg?seed=editor'
     );
     const authorId = userResult.lastInsertRowid;
@@ -40,11 +40,11 @@ async function seed() {
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
-    const p1Content = `# Welcome to Thrinax
+    const p1Content = `# Welcome to Aura
 
-We are absolutely thrilled to welcome you to **Thrinax**, a premium blogging platform built with clean design and modern engineering details.
+We are absolutely thrilled to welcome you to **Aura**, a premium blogging platform built with clean design and modern engineering details.
 
-Thrinax was designed from the ground up to offer writers and readers a seamless, glassmorphic reading experience.
+Aura was designed from the ground up to offer writers and readers a seamless, glassmorphic reading experience.
 
 ## Key Features
 
@@ -59,10 +59,10 @@ Thank you for joining our community of thinkers, creators, and developers!`;
 
     insertPost.run(
       authorId,
-      'Welcome to Thrinax',
-      'welcome-to-thrinax',
+      'Welcome to Aura',
+      'welcome-to-aura',
       p1Content,
-      'Discover Thrinax, a premium blogging platform built with a glassmorphic aesthetic and zero-dependency database integration.',
+      'Discover Aura, a premium blogging platform built with a glassmorphic aesthetic and zero-dependency database integration.',
       'linear-gradient(135deg, #6366f1 0%, #a855f7 100%)', // Cosmic
       'meta,announcement,welcome',
       'published'

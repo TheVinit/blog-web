@@ -1,4 +1,4 @@
-// Thrinax Global State & Toast Notification Store
+// Aura Global State & Toast Notification Store
 
 class Store {
   constructor() {

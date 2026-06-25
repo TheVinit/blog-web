@@ -41,5 +41,5 @@ app.get('*', (req, res) => {
 
 // Start Server
 app.listen(PORT, () => {
-  console.log(`[Server] Thrinax Blog Platform is running on http://localhost:${PORT}`);
+  console.log(`[Server] Aura Blog Platform is running on http://localhost:${PORT}`);
 });

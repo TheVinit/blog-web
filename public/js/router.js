@@ -1,4 +1,4 @@
-// Thrinax Hash-based SPA Client Router
+// Aura Hash-based SPA Client Router
 
 class Router {
   constructor() {

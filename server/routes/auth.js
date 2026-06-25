@@ -5,7 +5,7 @@ import db from '../db.js';
 import { authenticateToken } from '../middleware/auth.js';
 
 const router = express.Router();
-const JWT_SECRET = process.env.JWT_SECRET || 'thrinax_blog_secret_key_2026_premium_jwt_auth_token_987654';
+const JWT_SECRET = process.env.JWT_SECRET || 'aura_blog_secret_key_2026_premium_jwt_auth_token_987654';
 
 // REGISTER user
 router.post('/register', async (req, res) => {
@@ -47,7 +47,7 @@ router.post('/register', async (req, res) => {
       trimmedUsername,
       passwordHash,
       displayName ? displayName.trim() : trimmedUsername,
-      bio ? bio.trim() : 'Blogger at Thrinax',
+      bio ? bio.trim() : 'Blogger at Aura',
       avatarUrl || `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(trimmedUsername)}`
     );
 
@@ -70,7 +70,7 @@ router.post('/register', async (req, res) => {
         id: newUserId,
         username: trimmedUsername,
         displayName: displayName || trimmedUsername,
-        bio: bio || 'Blogger at Thrinax',
+        bio: bio || 'Blogger at Aura',
         avatarUrl: avatarUrl || `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(trimmedUsername)}`
       }
     });

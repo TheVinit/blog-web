@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'thrinax_blog_secret_key_2026_premium_jwt_auth_token_987654';
+const JWT_SECRET = process.env.JWT_SECRET || 'aura_blog_secret_key_2026_premium_jwt_auth_token_987654';
 
 export function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];

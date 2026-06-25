@@ -1,5 +1,5 @@
 {
-  "name": "thrinax-blog-platform",
+  "name": "aura-blog-platform",
   "version": "1.0.0",
   "description": "A premium full-stack blogging platform with user authentication, comments, and post likes.",
   "main": "server/index.js",

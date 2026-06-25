@@ -194,7 +194,7 @@ function renderFeed(posts, tags, activeTag = '', searchQuery = '') {
     <!-- Hero Block -->
     <section class="hero-section">
       <h1 class="hero-title">Discover <span class="gradient-text">Creative Ideas</span></h1>
-      <p class="hero-subtitle">Welcome to Thrinax, a premium blogging platform built with clean design and modern engineering details.</p>
+      <p class="hero-subtitle">Welcome to Aura, a premium blogging platform built with clean design and modern engineering details.</p>
       
       <!-- Filter and Search Bar -->
       <div class="filter-bar">
@@ -1046,7 +1046,7 @@ function renderAuthCard(isLoginMode) {
       let res;
       if (isLoginMode) {
         res = await api.login({ username, password });
-        store.showToast('Welcome back to Thrinax!', 'success');
+        store.showToast('Welcome back to Aura!', 'success');
       } else {
         const displayName = document.getElementById('auth-display-name').value;
         const bio = document.getElementById('auth-bio').value;

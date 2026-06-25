@@ -1,4 +1,4 @@
-// Thrinax API client library
+// Aura API client library
 
 const BASE_URL = '/api';
 
